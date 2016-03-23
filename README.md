@@ -16,6 +16,7 @@ yum install git -y
 
 ###第二步、安装Docker
 安装方法点击：[链接](https://github.com/zhaojianhui129/docker/blob/master/centos7%E4%B8%8B%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84docker.md)
+
 安装完成docker之后注册docker帐号，使用如下命令快速注册官方仓库帐号：
 ```sh
 docker login -u ycftest -p 123456 -e 'zhaojianhui@yaochufa.com'
@@ -55,16 +56,16 @@ docker pull ubuntu
 > bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mcrypt mysqli oci8 odbc opcache pcntl pdo pdo_dblib pdo_firebird pdo_mysql pdo_oci pdo_odbc pdo_pgsql pdo_sqlite pgsql phar posix pspell readline recode reflection session shmop simplexml snmp soap sockets spl standard sysvmsg sysvsem sysvshm tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zip
 
 官方仓库地址：
-> php
-> [英文地址](https://hub.docker.com/_/php/) 
+> php           
+> [英文地址](https://hub.docker.com/_/php/)              
 > [中文地址](https://github.com/DaoCloud/library-image/tree/master/php)
 > <br>
-> mysql
-> [英文地址](https://hub.docker.com/_/mysql/)
+> mysql     
+> [英文地址](https://hub.docker.com/_/mysql/)         
 > [中文地址](https://github.com/DaoCloud/library-image/tree/master/mysql)
 > <br>
-> nginx
-> [英文地址](https://hub.docker.com/_/nginx/)
+> nginx       
+> [英文地址](https://hub.docker.com/_/nginx/)          
 > [中文地址](https://github.com/DaoCloud/library-image/tree/master/nginx)
 
 ###第四步、启动容器
