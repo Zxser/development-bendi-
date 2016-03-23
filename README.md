@@ -39,6 +39,7 @@ git pull origin master
 
 制作镜像前根据自己的需求调整值，具体的设置值请查看各文件夹下的Dockerfile内容。
 执行以下命令，因为要从官方仓库拉取镜像，速度会很缓慢，耐心等待，并且多次尝试。
+直到出现（Successfully built b4dbab3c9442）的字样才算成功。
 ```sh
 #制作mysql自定义镜像
 docker build -t=ycftest/lnmp:mysql ./mysql/
@@ -57,7 +58,29 @@ mkdir -p /data/mysql
 #启动mysql容器
 docker run --name mysql -v /data/mysql:/var/lib/mysql -p 3306:3306 -d zhaojianhui/lnmp:mysql
 
+#将共享主机的目录挂载成一个数据卷容器，此容器用于共享php和nginx代码
+docker run -d -v /mnt/hgfs/GIT/:/www-data/ --name web ubuntu echo Data-only container for postgres
+#启动php容器
+docker run --name php --volumes-from web -d ycftest/lnmp:php
+#启动nginx容器
+docker run --name nginx --volumes-from web  -p 80:80 --link php:php -d ycftest/lnmp:nginx
 
 ```
 
 ###第五步、绑定host
+
+添加以下host到window目录的C:\Windows\System32\drivers\etc\HOSTS文件中，记住下面ip地址改为虚拟机ip。
+```sh
+192.168.10.101 mtest.yaochufa.com
+192.168.10.101 youtest.yaochufa.com
+192.168.10.101 acttest.yaochufa.com
+192.168.10.101 apitest.yaochufa.com
+192.168.10.101 apidoctest.yaochufa.com
+192.168.10.101 jobtest.yaochufa.com
+192.168.10.101 notifytest.yaochufa.com
+192.168.10.101 cpstest.yaochufa.com
+192.168.10.101 weixintest.yaochufa.com
+192.168.10.101 wwwtest.yaochufa.com
+```
+
+####第六步、打开浏览器开始查看吧。
