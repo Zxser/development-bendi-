@@ -55,9 +55,15 @@ docker pull ubuntu
 > bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mcrypt mysqli oci8 odbc opcache pcntl pdo pdo_dblib pdo_firebird pdo_mysql pdo_oci pdo_odbc pdo_pgsql pdo_sqlite pgsql phar posix pspell readline recode reflection session shmop simplexml snmp soap sockets spl standard sysvmsg sysvsem sysvshm tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zip
 
 官方仓库地址：
-> php   [英文](https://hub.docker.com/_/php/)      [中文](https://github.com/DaoCloud/library-image/tree/master/php)
-> mysql [英文](https://hub.docker.com/_/mysql/)    [中文](https://github.com/DaoCloud/library-image/tree/master/mysql)
-> nginx [英文](https://hub.docker.com/_/nginx/)    [中文](https://github.com/DaoCloud/library-image/tree/master/nginx)
+> php
+> [英文地址](https://hub.docker.com/_/php/) 
+> [中文地址](https://github.com/DaoCloud/library-image/tree/master/php)
+> mysql
+> [英文地址](https://hub.docker.com/_/mysql/)
+> [中文地址](https://github.com/DaoCloud/library-image/tree/master/mysql)
+> nginx
+> [英文地址](https://hub.docker.com/_/nginx/)
+> [中文地址](https://github.com/DaoCloud/library-image/tree/master/nginx)
 
 ###第四步、启动容器
 执行如下脚本
