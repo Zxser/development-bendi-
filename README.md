@@ -47,8 +47,12 @@ docker build -t=ycftest/lnmp:mysql ./mysql/
 docker build -t=ycftest/lnmp:php ./php/
 #制作nginx自定义镜像
 docker build -t=ycftest/lnmp:nginx ./nginx/
+#拉取ubuntu镜像用来制作数据卷容器
+docker pull ubuntu
 ```
 
+> 有效的php扩展列表为:
+> bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mcrypt mysqli oci8 odbc opcache pcntl pdo pdo_dblib pdo_firebird pdo_mysql pdo_oci pdo_odbc pdo_pgsql pdo_sqlite pgsql phar posix pspell readline recode reflection session shmop simplexml snmp soap sockets spl standard sysvmsg sysvsem sysvshm tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zip
 
 ###第四步、启动容器
 执行如下脚本
@@ -56,7 +60,7 @@ docker build -t=ycftest/lnmp:nginx ./nginx/
 #创建mysql数据文件目录
 mkdir -p /data/mysql
 #启动mysql容器
-docker run --name mysql -v /data/mysql:/var/lib/mysql -p 3306:3306 -d zhaojianhui/lnmp:mysql
+docker run --name mysql -v /data/mysql:/var/lib/mysql -p 3306:3306 -d ycftest/lnmp:mysql
 
 #将共享主机的目录挂载成一个数据卷容器，此容器用于共享php和nginx代码
 docker run -d -v /mnt/hgfs/GIT/:/www-data/ --name web ubuntu echo Data-only container for postgres
