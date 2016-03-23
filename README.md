@@ -27,8 +27,18 @@ docker login -u ycftest -p 123456
 ```
 
 ###第三步、制作自定义镜像
-制作镜像前根据自己的需求调整值，具体的值请查看各文件夹下的Dockerfile内容。
-执行如下脚本
+拉取ycfDocker项目列表
+
+```sh
+#克隆代码
+git clone 'https://github.com/zhaojianhui129/ycfDocker.git'
+#拉取更新代码
+cd ycfDocker/
+git pull origin master
+```
+
+制作镜像前根据自己的需求调整值，具体的设置值请查看各文件夹下的Dockerfile内容。
+执行以下命令，因为要从官方仓库拉取镜像，速度会很缓慢，耐心等待，并且多次尝试。
 ```sh
 #制作mysql自定义镜像
 docker build -t=ycftest/lnmp:mysql ./mysql/
@@ -37,7 +47,7 @@ docker build -t=ycftest/lnmp:php ./php/
 #制作nginx自定义镜像
 docker build -t=ycftest/lnmp:nginx ./nginx/
 ```
-此叫笨将会
+
 
 ###第四步、启动容器
 执行如下脚本
