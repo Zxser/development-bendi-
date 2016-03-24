@@ -5,6 +5,7 @@
 
 ###第一步、准备
 工具：VMware Workstation 12.1.0（虚拟机）、SecureCRT（终端仿真程序）、centos 7.0
+
 虚拟机准备：centos需要安装vmware tools，虚拟机需要开通文件夹共享并且将项目目录共享到操作系统的/mnt/hgfs/GIT/目录。
 > vmware tool安装方法 [点击查看](https://github.com/zhaojianhui129/lnmp/blob/master/vmware%20tool%E5%AE%89%E8%A3%85.md)
 
